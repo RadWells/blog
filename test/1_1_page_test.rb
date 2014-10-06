@@ -14,16 +14,16 @@ class PageTest < Minitest::Test
   end
 
   def test_can_assign_text_to_the_header
-    skip
+   
     expected = "Wherein we learn whether it doth blend"
     @page.header = expected
     # Okay now let's see what's in the object
     actual = @page.header
-    assert_equal(expected, actual, "page.header must return '#{text_to_test}' in this test")
+    assert_equal(expected, actual, "page.header must return '#{expected}' in this test")
   end
 
   def test_begins_with_an_empty_article
-    skip
+    
     expected = ""
     actual = @page.article
     assert_equal(expected, actual, "page.article must return an empty string in this test")

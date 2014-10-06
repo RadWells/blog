@@ -30,32 +30,32 @@ class PageTest < Minitest::Test
   end
 
   def test_can_assign_text_to_the_article
-    skip
+   
     expected = "Lots of arguments to prove that it does blend. Also, a video of it blending."
     @page.article = expected
     # Okay now let's see what's in the object
     actual = @page.article
-    assert_equal(expected, actual, "page.article must return '#{text_to_test}' in this test")
+    assert_equal(expected, actual, "page.article must return '#{expected}' in this test")
   end
 
   def test_begins_with_an_empty_timestamp
-    skip
+    
     expected = nil
     actual = @page.timestamp
     assert_equal(expected, actual, "page.timestamp should be nil in this test")
   end
 
   def test_can_be_assigned_a_timestamp
-    skip
+    
     expected = Time.new(2014, 4, 1, 14, 47, 4)
     @page.timestamp = expected
     # Okay now let's see what's in the object
     actual = @page.timestamp
-    assert_equal(expected, actual, "page.timestamp should be equal to #{expected_timestamp} in this test")
+    assert_equal(expected, actual, "page.timestamp should be equal to #{expected} in this test")
   end
 
   def test_has_a_regular_format_for_stringifying
-    skip
+    
     expected_data =
       {
        "header" => "The lost Pokemon",
@@ -65,13 +65,13 @@ class PageTest < Minitest::Test
     @page.header = expected_data["header"]
     @page.article = expected_data["article"]
     @page.timestamp = expected_data["timestamp"]
-    expected = "Header: #{expected_data["header"]}\nTime: #{expected_data["timestamp"]}\nArticle: #{expected_data["article"]}"
+    expected = "Header: #{expected}\nTime: #{expected["timestamp"]}\nArticle: #{expected["article"]}"
     actual = @page.to_s
     assert_equal(expected, actual)
   end
 
   def test_can_be_passed_in_values_as_a_hash
-    skip
+    
     expected_data =
       {
        "header" => "The lost Pokemon",

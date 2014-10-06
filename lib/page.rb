@@ -12,6 +12,6 @@ end
 
 
   def to_s
-    "Header: #{@header}\nTime: #{@timestamp]}\nArticle: #{@article}"
+    "Header: #{@header}\nTime: #{@timestamp}\nArticle: #{@article}"
   end
 end

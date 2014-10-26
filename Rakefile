@@ -5,17 +5,17 @@ require 'sinatra/activerecord/rake'
 require './connection'
 
 namespace :db do
-  desc 'create parlance db'
+  desc 'create wellsrobot db'
   task :create_db do
     conn = PG::Connection.open()
-    conn.exec('CREATE DATABASE parlance;')
+    conn.exec('CREATE DATABASE wellsrobot;')
     conn.close
   end 
 
-  desc 'drop parlance db'
+  desc 'drop wellsrobot db'
   task :drop_db do
     conn = PG::Connection.open()
-    conn.exec('DROP DATABASE parlance;')
+    conn.exec('DROP DATABASE wellsrobot;')
     conn.close
   end
 end

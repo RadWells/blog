@@ -43,7 +43,7 @@ class TextbookCSVTest < Minitest::Test
   end
 
   def test_to_s_reads_from_csv_properly
-    skip
+    
     page = Page.new(page_data)
     textbook = Textbook.new(file_name)
     textbook.insert(page)
@@ -53,7 +53,7 @@ class TextbookCSVTest < Minitest::Test
   end
 
   def test_handles_two_entries_well
-    skip
+    
     page1 = Page.new(page_data)
     page2 = Page.new(second_page_data)
     temp_file_name = file_name

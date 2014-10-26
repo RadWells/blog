@@ -7,7 +7,7 @@ class Textbook
 	end
 
 	def insert(page)
-		CSV.open(@pagesource, "wb") do |csv|
+		CSV.open(@pagesource, "a") do |csv|
 			csv << [page.header, page.article, page.timestamp]
 		end
 	end
@@ -16,7 +16,15 @@ class Textbook
 
 
 	def to_s
-		File.read(@pagesource).chomp
+    str = ""
+		CSV.read(@pagesource).each do |row|
+      header, article, timestamp = row
+      str << "Header: #{header}\n"
+      str << "Article #{article}\n"
+      str << "Time: #{timestamp}\n"
+  end
+  str.chomp
+
 	end	
 end
 

@@ -1,0 +1,12 @@
+<h1>Wells and Robot</h1>
+<h2>A Journey from -1 to 0</h2>
+
+<ul>
+<% @entries.each do |entry| %>
+  <li>
+    <h2><a href="/entries/<%= entry.id %>"><%= entry.title %></a>
+      <%= entry.created_at %> </a>
+    </h2>
+  </li>
+<% end %>
+</ul> 

@@ -1,0 +1,8 @@
+<h3>Edit Entry</h3>
+
+<form action="/entries/<%= @entry.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="title" style="width: 50px" placeholder="New Title">
+  <input type="text" name="body" class="blogbody" placeholder="">
+  <input type="submit" value="Submit changes">
+</form>

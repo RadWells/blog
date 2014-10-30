@@ -54,7 +54,7 @@ post '/entries' do
   new_title = params['title']
   new_body = params['body']
 Entry.create({:title => new_title, :body => new_body})
-  redirect '/index'
+  redirect '/'
 end
 
 patch '/entries/:id' do

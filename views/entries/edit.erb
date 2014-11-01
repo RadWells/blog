@@ -2,7 +2,6 @@
 
 <form action="/entries/<%= @entry.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
-  <input type="text" name="title" style="width: 80px" value="<%= @entry.title>"
-  <input type="text" name="body" class="blogbody" value="<%= @entry.body>"
-  <input class="button" type="submit" value="Submit changes">
-</form>
+  <input type="text" name="title" style="width: 100px" value="<%= @entry.title %>">
+  <input type="text" name="body" class="blogbody" value="<%= @entry.body %>">
+  <input class="button" type="submit" value="Edit Post"/>

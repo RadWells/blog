@@ -1,50 +1,59 @@
 body {
 
-background-color: #F5F5F5;
+background-color: #F8F8FF;
 font-family: Didot;
 
 }
 
 .masthead{
-text-decoration: none;
+   text-decoration: none;
+   text-align: center;
+   font-size: 2em;
+   padding: 0px;
+}
+
+.navigation{
+   display: inline-block;
 
 }
 
-.blogbody
+.blogbody{
 
-{
   width: 300px;
-  height: 250px;
-
+  height: 250px; 
 }
 
-.button {
-   border-top: 1px solid #c5cce0;
-   background: #c5cce0;
-   background: -webkit-gradient(linear, left top, left bottom, from(#c5cce0), to(#c5cce0));
-   background: -webkit-linear-gradient(top, #c5cce0, #c5cce0);
-   background: -moz-linear-gradient(top, #c5cce0, #c5cce0);
-   background: -ms-linear-gradient(top, #c5cce0, #c5cce0);
-   background: -o-linear-gradient(top, #c5cce0, #c5cce0);
-   padding: 5px 10px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   border-radius: 8px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: #030003;
+.head{
+     color:#3d59ab;
+     font-size: 1em;
+   
+}
+
+.button { 
+   border-top: 0px solid #f8f8ff;
+   background: #f8f8ff;
+   padding: 4px 8px;
    font-size: 14px;
+   font-family: Didot;
    text-decoration: none;
    vertical-align: middle;
+
    }
 .button:hover {
-   border-top-color: #c5cce0;
-   background: #c5cce0;
-   color: #1b48cf;
+   border-top-color: #3d59ab;
+   background: #3d59ab;
+   color: #f8f8ff;
    }
 .button:active {
-   border-top-color: #c5cce0;
-   background: #c5cce0;
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+   ul {
+      list-style-type: none;
+   }
+
+   a {
+
+      text-decoration: none;
    }

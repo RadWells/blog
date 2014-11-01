@@ -8,15 +8,15 @@
   <script src="/javascripts/scripts.js"></script>
 </head>
 <body>
+  <div class="masthead">
+    <h1><a class="head"href="/">Wells and Robot</a></h1>
+    <h4>A Journey from [-1...0]</h4>
+  </div>
 
-<h1><a class="masthead"href="/">Wells and Robot</a></h1>
-<h2>A Journey from [-1...0]</h2>
 
-
-
- <% if current_user %>
+  <% if current_user %>
     <%= erb :'_nav_for_user'%>
-  <% else %>
+    <% else %>
     <%= erb :'_nav_for_non_user'%>
   <% end %>
 

@@ -13,17 +13,14 @@
 <h2>A Journey from [-1...0]</h2>
 
 
-  <ul>
-    <li><a href="/about"></a>About me</li>             
-    <li><a href="/entries/new">New Post</a></li>                   
-  </ul>
 
-  <% if current_user %>
+ <% if current_user %>
     <%= erb :'_nav_for_user'%>
   <% else %>
     <%= erb :'_nav_for_non_user'%>
   <% end %>
 
   <%= yield %>
+
 </body>
 </html>

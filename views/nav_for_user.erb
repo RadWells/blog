@@ -4,9 +4,10 @@
     <li><a href="/">Home</a></li>
     <li><a href="/about">About Me</a></li>             
     <li><a href="/entries/new">New Post</a></li>                             
-    <% if entry_show_page?  %>
-      <li><a href="//<%= @post.id %>/edit">Edit Post</a></li>
-      <li><%= delete_post_button(@post.id) %></li>
+    <li><form action="/sessions" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Log-Out">
+  </form></li>
     <% end %>
   </ul>
 

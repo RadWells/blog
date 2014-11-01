@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :comments
 
   def password
-    @password ||= Password.new(self.password_hash)
+    @password ||= Password.new(password_hash)
   end
 
   def password=(new_password)

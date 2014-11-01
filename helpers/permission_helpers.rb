@@ -1,5 +1,5 @@
 module Sinatra
-    module PermissionHelper
+    module AuthenticationHelper
 
       def current_user
         if session[:current_user]
@@ -11,7 +11,7 @@ module Sinatra
 
       def authenticate!
         redirect '/' unless @current_user
-        end
+      end
   end
-  helpers PermissionHelper
+  helpers AuthenticationHelper
 end

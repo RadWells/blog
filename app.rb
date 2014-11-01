@@ -35,7 +35,7 @@ get '/login' do
 end
 
 post '/sessions' do
-  redirect '/login' unless user = User.find_by({name: params[:name]})
+  redirect '/login' unless user = User.find_by({username: params[:username]})
   if user.password == params[:password]
     session[:current_user] = user.id
     redirect '/'

@@ -3,7 +3,7 @@
 <ul class="index">
 <% @entries.each do |entry| %>
   <li>
-    <h4><a href="/entries/<%= entry.id %>"><%= entry.title %></a></h4>
+    <p id="mainlist"><a class= "button3" href="/entries/<%= entry.id %>"><%= entry.title %>  || <%= pretty_date(entry.created_at)%> </a><p>
   </li>
 <% end %>
 </ul> 

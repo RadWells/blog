@@ -74,7 +74,7 @@ get "/entries/:id" do
   @entry = Entry.find(params[:id])
   erb :"entries/show" 
 end
-
+  
 #get edit post form
 
 get "/entries/edit/:id" do

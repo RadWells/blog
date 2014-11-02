@@ -58,7 +58,6 @@ end
 
 #get new post form
 get '/entries/new' do
-  authenticate!
   erb :'entries/new'
 end
 
@@ -79,7 +78,6 @@ end
 #get edit post form
 
 get "/entries/edit/:id" do
-  
   authenticate!
   @entry = Entry.find(params[:id])
   erb :"entries/edit"
@@ -96,6 +94,7 @@ end
 
 #delete a post
 delete "/entries/:id" do
+  authenticate!
   @entry = Entry.find(params[:id]).destroy
   redirect "/"
 end

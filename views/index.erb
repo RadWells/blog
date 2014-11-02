@@ -1,11 +1,9 @@
 
 
-<ul>
+<ul class="index">
 <% @entries.each do |entry| %>
   <li>
-    <h2><a href="/entries/<%= entry.id %>"><%= entry.title %></a>
-      <%= entry.created_at %> </a>
-    </h2>
+    <h4><a href="/entries/<%= entry.id %>"><%= entry.title %></a></h4>
   </li>
 <% end %>
 </ul> 

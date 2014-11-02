@@ -58,7 +58,8 @@ end
 
 #get new post form
 get '/entries/new' do
-   erb :'entries/new'
+  authenticate!
+  erb :'entries/new'
 end
 
 #create new post
@@ -78,6 +79,8 @@ end
 #get edit post form
 
 get "/entries/edit/:id" do
+  
+  authenticate!
   @entry = Entry.find(params[:id])
   erb :"entries/edit"
 end

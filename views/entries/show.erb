@@ -1,12 +1,12 @@
 <h1><%= @entry.title %></h1> 
 <p><%= @entry.body %></p>
 
+<form action="/entries/edit/<%= @entry.id %>" method="get">
+  <input class="button" type="submit" value="Edit Post" />
+</form>
 
 <form action="/entries/<%= @entry.id %>" method="post">
   <input type="hidden" name="_method" value="delete" /> 
   <input class="button" type="submit" value="Delete Post" />
 </form>
 
-<form action="/entries/edit/<%= @entry.id %>" method="get">
-  <input class="button" type="submit" value="Edit Post" />
-</form>
